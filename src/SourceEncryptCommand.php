@@ -139,6 +139,10 @@ class SourceEncryptCommand extends Command
                     $code .= $token[1];
                     continue;
                 }
+                
+                 if( token_name($token[0]) == 'T_COMMENT'){
+                    continue;
+                 }
 
                 if( empty($match[0]) ){
                     $code .=  $token[1];
